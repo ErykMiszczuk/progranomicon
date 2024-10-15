@@ -1,0 +1,44 @@
+---
+type: lesson
+title: Język JavaScript
+---
+# Dlaczego JS?
+JavaScript jest jednym z najpopularniejszych języków programowania obecnie (pewnie jest dostępny na więcej niż 8 bilionach urządzeń które napędza Java).
+Za pomocą tego języka można tworzyć aplikacje przeglądarkowe (Gmail, Messenger na web), aplikacje serwerowe (Node, Deno, Bun, llrt), aplikacje mobilne i desktopowe (React Native), gry komputerowe (Phaser, Babylon).
+Jego wszechstronność, popularność w różnych dziedzinach i komercyjne wykorzystanie (podobno 50% internetu stoi na Wordpressm, to pewnie 42% na Node.js) sprawia iż jest to najlepszy język do nauki programowania.
+
+## JavaScript
+Języki JavaScript jest językiem interpretowanym (choć przeglądarki wykorzystują takie mechanizmy jak just in time compilation, bytecode optimisation do przyspieszenia wykonywania poleceń) słabo typowanym.
+Co kryje się za językiem interpretowanym już było wyjaśnione na poprzedniej lekcji. Natomiast pod pojęcięm słabo typowanym kryje się fakt, że zmienne mogą zmieniać swój typ. Przy porównywaniu dwóch zmiennych ich typy jeśli są różne będą automatycznie przyrównane do jednego w przypadku tej zmiennej której konwersja do wspólnego typu jest możliwa.
+Jest to największy problem języka, który pozwala nam błędnie przekazywać do funkcji dodającej do siebie dwie liczby dwa różne typy (np ciąg znaków "7" i liczbę 42) co da nam niespodziewany wynik - ciąg znaków `742`.
+```js
+function sum(a, b) {
+    return a + b
+}
+const result = sum("7", 42)
+// wynik to "742" choć nazwa
+```
+Nie dostaniemy informacji o tym, że taka transformacja liczby 42 na ciąg znaków została dokonana (o ile nie mamy odpowiednich narzędzi zainstalowanych w edytorze lub środowisku uruchomieniowym).
+
+Język ten cechuje się wykorzystaniem różncyh stylów programowania między innymi proceduralnym (bloki kodu, zakres dostępności zmiennych), obiektowym (większość zmiennych w JS to obiekty) i funkcyjnym (funkcje mogę być przypisane do zmiennej i przekazywane jako argument innych funkcji, istnieją funkcje anonimowe i funkcje lambda).
+Dzięki takiemu miksowi styli dane w tym jezyku można łatwo enkapsulować, transformować, a kod dzielić na łatwe do testowania bardzo małe funkcje, które są do wykorzystania tylko w danym obiekcie (metoda klasy) lub bardziej generyczne.
+
+Ze wzgledu na łatwość w nauczaniu tego języka, mnogość możliwości jego wykorzystania, ten kurs skupi się na właśnie nim. Jeśli jednak czytelnik chce się nauczyć programować w innych językach lub wykorzystać w innych wypadkach niż wspomniane w pierwszym paragrafie, to w następnej sekcji znajdują się inne źródła do nauki.
+
+## Czy na pewno nie chcesz korzystać z JavaScript?
+Jeżeli drogi czytelniku jesteś pewien że nie chcesz uczyć się języka JavaScript to tutaj znajduje się lista dobrych (moim zdaniem) źródeł:
+- `Haskell` - interpretowany, czysto funkcyjny, nie jest najpopularniejszym wyborem jeśli chodzi o aplikacje komercyjne https://learnyouahaskell.com/chapters
+- `Gleam` - interpretowany (z możliwością kompilacji), silnie funkcyjny, ma możliwość kompilacji do kodu JavaScript, może korzystać z ekosystemu paczek języka Erlang i Elixir https://gleam.run/
+- `Elixir` - interpretowany, silnie funkcyjny, korzysta z maszyny wirtualnej BEAM i bazuje na Erlangu (stworzone specjalnie na potrzeby centralek telefonicznych), ma wyjątkowe osiągnięcia w aplikacjach komercyjnych (backend Discord i WhatsApp) https://hexdocs.pm/elixir/introduction.html
+- `Erlang` - interpretowany, silnie funkcyjny, korzysta z maszyny wirtualnej BEAM (stworzone specjalnie na potrzeby centralek telefonicznych) https://www.erlang.org/doc/readme.html
+- `Rust` - proceduralny, systemowy, kompilowany, język skupiony na bezpieczeczeństwie programu i obsłudze błędów, wykorzystywany w jądrze linuxa, windowsa i przeglądarce Firefox, zalecany przez Microsoft i NSA https://www.rust-lang.org/learn
+- `C` - kompilowany, najbardziej popularny język programownia kompilowany, jeden z dwóch które można wykorzystywac do pisania kodu jądra linuxa, popularny w grach wideo i wysoko wydajnych aplikacjach
+- `C++` - kompilowany, drugi najbardziej popularny język programowania kompilowany, rozszerzenie języka `C` o bardziej obiektowe możliwości, popularny w grach wideo i wysoko wydajnych aplikacjach
+- `Swift` - proceduralny, kompilowany głownie wykorzystywany do tworzenia aplikacji na urządzenia marki Apple, ale jest możliwość ykorzystania go na innych plstformach https://www.swift.org/getting-started/
+- `Pyhton` - proceduralny, interpretowany, wykorzystywany komercyjnie (usługi i logika biznesowa) jak i naukowo (uczenie maszynowe, wykonuwanie obliczeń na symbolach itp) https://wiki.python.org/moin/BeginnersGuide/NonProgrammers https://realpython.com/
+- `Lua` - proceduralny, interpretowany, głównie wykorzystywany jako język skryptowy w programach i grach (Dark souls, Minetest modding api) https://www.lua.org/pil/contents.html
+- `PHP` - proceduralny, interpretowany, wykorzystywany komercyjnie do tworzenia serwisów i aplikacji webowych, nadal wykorzystywany np przez (Wordpress) https://www.php.net/manual/en/
+- `Java` - obiektowy, kompilowany, komercyjnie wykorzystywany w Androidzie czy innych 8 milionach urządzeń, oraz grach (Minecraft Java Edition) https://docs.fabricmc.net/develop/getting-started/introduction-to-fabric-and-modding
+- `C#` - obiektowy, kompilowany, głównie wykorzystywany w produktach firmy Microsoft, ale także jako język skryptowy w silnikach Unity i Godot (no nie chcę nic mówić ale dokumentacja Microsoftu, jest bardzo dobra) https://learn.microsoft.com/pl-pl/dotnet/csharp/tour-of-csharp/overview
+- `GDScript` - proceduralny, kompilowany język programowania, wykorzystywany jedynie w silinku Godot, także ma ograniczone wykorzystanie poza tworzeniem gier https://gdquest.github.io/learn-gdscript/
+- `Go` - proceduralny, kompilowany wykorzystywany komercyjnie, bardzo łatwy do przyswojenia i tworzenia współbierznych aplikacji https://go.dev/tour/list

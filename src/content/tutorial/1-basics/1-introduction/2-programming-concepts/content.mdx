@@ -1,0 +1,39 @@
+---
+type: lesson
+title: Programowanie - pojęcia
+---
+# Programowanie - pojęcia
+Podstawowe pojęcia:
+- `Język programowania` - jest to kodowanie instrukcji, które ma wykonywać komputer. Ma on określoną składnię i aby program się wykonał jego kod musi być z nią zgodny. Języki programowania dzielą na różne kategorie zależne od możliwych stylów programowania.
+- `Język niskopoziomowy` - język pozwalający na tworzenie kodu maszynowego danego procesora, w procesie kompilacji z języka zrozumiałego dla ludzi na zrozumiały dla komputera.
+- `Język wysokopoziomowy` - języki interpretowane lub uruchamiane przez utworzone dla nich środowiska uruchomieniowe, któr tłumaczą program na kod maszynowy zrozumiały dla danego procesora.
+- `Kod maszynowy` - kod zrozumiały dla komputera.
+- `Assembler` - mnemoniki mapowane jeden do jeden na kod maszynowy. Ułatwiają pisanie programów ludziom.
+- `Kompilacja` - proces tłumaczenia instrukcji zapisanych z użyciem języka programowania na kod maszynowy, wykonywany przed uruchomieniem programu.
+- `Interpreter` - program tłumaczący intrukcje na kod maszynowy w trakcie wykonywania programu.
+- `Style programownia` - albo paradygmat określa jakie struktury są głównym elementem budowy programów. Języki rzadko korzystają z jednego stylu, najczęściej jest to pewien zakres i są skupione na jednym stylu bardziej niż na innych.
+- `Styl imperatywny` - opisujemy dokładnie krok po kroku instrukcje jakie ma wykonać program. Łatwo przez to osiągnąć błędny wynik (błąd człowieka przy implementacji logiki, literówki) lub nawet zablokować możliwość dalszego poprawnego wykonania kodu (przepełnienie bufora, osiągnięcie niemożliwego stanu programu - MissingNo. w pokemonach).
+- `Styl funkcyjny` - opiera się na wykorzystaniu funkcji i innych struktur matematycznych do tworzenia programów. Cechuje się wysoką testowalnością kodu, w niektórych językach nie istnieje limit wywołań rekurencyjnych. Niestety aby na przykład wyświetlić coś na ekranie trzeba użyć monady, co nie jest najłatwiejszą do opanowania.
+- `Styl obiektowy` - pozwala opakowywać dane w pewien schemat/strukturę a dokładniej klasę która przechowuje w sobie jakieś wartości i operacje jakie można wykonać na tych danych. Dodatkowo klasy można dziedziczyć, czyli tworzyć klasy potomne zawierające właściwości rodzica i dodakowe dodane w klasie potomnej. Wadą jest trudność w dzieleniu zachowania pomiędzy dwoma klasami potomnymi, bez implementowania danej cechy w rodzicu, co łatwo prowadzi do duplikacji kodu.
+- `Styl deklaratywny` - opisuje jaki chcemy otrzymać wynik obliczeń ale nie opisujemy dokładnych kroków do uzykania tego wyniku. Programy są czytelniejsze, niestety mogą długo się wykonywać lub wymagać większych zasobów sprzętowych niż programy napisane imperatywnie.
+- `Styl proceduralny` - podobnie jak styl imperatywny opisujemy zachowanie krok po kroku, ale istnieje struktura znana jako blok kodu i zakres. Blok kodu oddziela pewną część kodu pozwalając na wykonaywanie obliczeń w osobnym module, natomiast zakres określa gdzie zadeklawane zmienne są dostępne. W przeciwieństwie do programowania obiektowego nie wymaga definiowania operacji na danych bezpośrednio w klasie.
+- `Zmienna` - nazwany identyfikator miejsca w pamięci komputera gdzie przechowywana jest wartość.
+- `Funkcja` - jest to pewien wydzielony fragment obliczeń bądź instrukcji który wykonuje się poprzez podanie mu argumentów. W przeciwieństwie do funkcji znanych z matematyki w programowaniu funkcja może nie zwracać wartości.
+- `Czysta funkcja` - (pure function) jest to funkcja która tak jak w matematyce zawsze zwraca wartość.
+- `Klasa` - definicja struktury danych i możliwych operacji na niej.
+- `Obiekt` - instancja klasy, struktura zgodna z opisem klasy.
+- `Wyrażenie` - (expression) jest to ciąg instrukcji które tworzą i kalkulują sie na pewną wartość (wiem bardzo abstrakcyjne).
+- `Oświadczenie` - (statement) jest to ciąg instrukcji które się wykonują ale nie obliczają wartości (tak tak chyba zaraz podam przykłady).
+- `Struktura danych` - forma zapisu danych w pamięci, często dostosowana do zadania jakie ma wykonywać.
+
+## Przykładowe kody źródłowe
+Przykładowe impementacje zowiązań różnych problemów można znaleźć na stronach:
+- [RosettaCode](https://rosettacode.org/wiki/Category:Solutions_by_Programming_Task)
+- [TheAlgorithms](https://the-algorithms.com/)
+
+## Rozwój języków programownia
+Na podanym diagramie widać rozwój języków programowania, niestety tylko do roku 2004
+https://cdn.oreillystatic.com/news/graphics/prog_lang_poster.pdf
+
+Więcej informacji o czasie powstawania języków można przeczytać w tym artykule na Wikipedii
+https://en.wikipedia.org/wiki/Timeline_of_computing

@@ -1,0 +1,35 @@
+---
+type: lesson
+title: Witaj JS!
+focus: /program.js
+---
+# Witaj w twojej pierwszej lekcji programowania
+
+Typy danych w języku JavaScript
+W zależności od języka dostępne typy danych lub ich nazwy moga się różnić. Jednakże w większości występują dwa typy: proste (prymitywne, simple, primitive) i złożone (composite).
+
+Typy proste:
+- `number` - typ numeryczny
+- `bigInt` - typ numeryczny dla bardzo dużych liczb całkowitych
+- `boolean` - typ prawda fałsz
+- `undefined` - typ mówiący że zmienna nie została przypisana
+- `null` - typ mówiący że zmienna nie ma wartości
+- `string` - typ przechowujący ciągi znaków
+- `Symbol` - typ przechowuje unikalną dla całego programu wartość
+
+Typy złożone:
+- `Array` - lista, przechowuje wiele wartości różnego typu w kolejności dodania
+- `TypedArray` - specjalna struktóra pozwalająca na modyfikację ciągów binarnych różnych typów liczb
+- `Object` - obiekt, przechowuje wiele wartości różnego typu ale nie ma gwarancji umieszczenia ich w obiekcie w kolejnosci dodania, dodatkowo dostęp do wartości jest dostępny porzez klucze (najczęściej typu `string`)
+- `Set` - zbiór, przechowuje wiele wartości ale wszystkie są unikalne
+- `Map` - tablica hashowana, przechowuje wiele wartości różnego typu, podobne do obiektów, jednak klucze mogą być dowolnego typu
+- `WeakSet` - zbiór, można przechowywać tylko obiekty i symbole, ułatwia to odzykiwanie pamięci przez zbieracza śmieci (garbage collector)
+- `WeakMap` - tablica hashowana, można przechowywać tylko obiekty i symbole, ułatwia to odzykiwanie pamięci przez zbieracza śmieci (garbage collector)
+- `Function` - funkcja podobna do tych znanych z matematyki
+
+Zaczynamy od utworzenia zmiennych.
+Zmienne w JS deklarujemy za pomocą słów kluczowych `var, let, const` po którym występuje nazwa zmiennej. Następnie nazwanej zmiennej możemy przypisać wartość za pomocą operatora `=` i następującej wartości zmiennej.
+```ts add={9}
+var name = "Grzegorz Brzęczyszczykiewicz"
+```
+
