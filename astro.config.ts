@@ -2,7 +2,7 @@ import tutorialkit from '@tutorialkit/astro';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'progranomicon.netlify.app',
+  site: 'https://progranomicon.netlify.app',
   devToolbar: {
     enabled: false,
   },
